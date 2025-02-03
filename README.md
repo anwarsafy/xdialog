@@ -73,12 +73,6 @@ void showImageDialog(BuildContext context) {
 
 ---
 
-## 📸 Example UI Preview
-![Uploading Screenshot 2025-02-03 at 4.04.45 PM.png…]()
-
-![Uploading Screenshot 2025-02-03 at 4.03.46 PM.png…]()
-
-
 ### Basic Confirmation Dialog
 
 ---
