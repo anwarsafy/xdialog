@@ -165,7 +165,7 @@ class _XDialogContent extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -179,7 +179,7 @@ class _XDialogContent extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: IconButton(
-                icon: Icon(Icons.close, color: textColor?.withOpacity(0.6)),
+                icon: Icon(Icons.close, color: textColor?.withValues(alpha: 0.6)),
                 onPressed: onClose ?? () => Navigator.pop(context),
               ),
             ),
@@ -201,7 +201,7 @@ class _XDialogContent extends StatelessWidget {
           width: iconSize,
           height: iconSize,
           decoration: BoxDecoration(
-            color: positiveButtonColor.withOpacity(0.1),
+            color: positiveButtonColor.withValues(alpha: 0.1),
             shape: BoxShape.circle,
           ),
           child: Icon(
@@ -231,7 +231,7 @@ class _XDialogContent extends StatelessWidget {
       textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: messageFontSize,
-        color: textColor?.withOpacity(0.8),
+        color: textColor?.withValues(alpha: 0.8),
         height: 1.5,
       ),
     );
@@ -297,12 +297,12 @@ class _DialogButtonState extends State<_DialogButton> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: _isHovered ? widget.color.withOpacity(0.9) : widget.color,
+          color: _isHovered ? widget.color.withValues(alpha: 0.9) : widget.color,
           borderRadius: BorderRadius.circular(8),
           boxShadow: _isHovered
               ? [
             BoxShadow(
-              color: widget.color.withOpacity(0.3),
+              color: widget.color.withValues(alpha: 0.3),
               blurRadius: 8,
               offset: const Offset(0, 4),
             )
