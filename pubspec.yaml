@@ -1,6 +1,6 @@
 name: xdialog
 description: A highly customizable animated dialog package for Flutter with dynamic configurations, multiple button support, and smooth animations.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/anwarsafy/xdialog
 repository: https://github.com/anwarsafy/xdialog
 issue_tracker: https://github.com/anwarsafy/xdialog/issues
