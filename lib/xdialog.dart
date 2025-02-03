@@ -66,7 +66,8 @@ class XDialog {
           scale = Tween<double>(begin: 0.8, end: 1.0).evaluate(curvedAnimation);
         }
         if (useFadeAnimation) {
-          opacity = Tween<double>(begin: 0.0, end: 1.0).evaluate(curvedAnimation);
+          opacity =
+              Tween<double>(begin: 0.0, end: 1.0).evaluate(curvedAnimation);
         }
 
         return Transform.scale(
@@ -179,7 +180,8 @@ class _XDialogContent extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: IconButton(
-                icon: Icon(Icons.close, color: textColor?.withValues(alpha: 0.6)),
+                icon:
+                    Icon(Icons.close, color: textColor?.withValues(alpha: 0.6)),
                 onPressed: onClose ?? () => Navigator.pop(context),
               ),
             ),
@@ -297,16 +299,17 @@ class _DialogButtonState extends State<_DialogButton> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: _isHovered ? widget.color.withValues(alpha: 0.9) : widget.color,
+          color:
+              _isHovered ? widget.color.withValues(alpha: 0.9) : widget.color,
           borderRadius: BorderRadius.circular(8),
           boxShadow: _isHovered
               ? [
-            BoxShadow(
-              color: widget.color.withValues(alpha: 0.3),
-              blurRadius: 8,
-              offset: const Offset(0, 4),
-            )
-          ]
+                  BoxShadow(
+                    color: widget.color.withValues(alpha: 0.3),
+                    blurRadius: 8,
+                    offset: const Offset(0, 4),
+                  )
+                ]
               : [],
         ),
         child: Material(

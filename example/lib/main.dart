@@ -34,7 +34,7 @@ class XDialogExampleScreen extends StatelessWidget {
               context,
               'Basic Dialog',
               Colors.blue,
-                  () => XDialog.show(
+              () => XDialog.show(
                 context: context,
                 title: 'Welcome!',
                 message: 'This is a basic XDialog example',
@@ -44,7 +44,7 @@ class XDialogExampleScreen extends StatelessWidget {
               context,
               'Custom Icon',
               Colors.amber,
-                  () => XDialog.show(
+              () => XDialog.show(
                 context: context,
                 title: 'Warning',
                 message: 'Critical system alert',
@@ -56,7 +56,7 @@ class XDialogExampleScreen extends StatelessWidget {
               context,
               'Multiple Buttons',
               Colors.blue,
-                  () => XDialog.show(
+              () => XDialog.show(
                 context: context,
                 title: 'Confirm Action',
                 message: 'Please select an option:',

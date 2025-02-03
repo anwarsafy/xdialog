@@ -30,60 +30,60 @@ void main() {
     });
 
     testWidgets('Dialog with buttons displays correctly',
-            (WidgetTester tester) async {
-          await tester.pumpWidget(MaterialApp(
-            home: Scaffold(
-              body: Builder(
-                builder: (context) => Center(
-                  child: TextButton(
-                    onPressed: () => XDialog.show(
-                      context: context,
-                      title: 'Buttons Test',
-                      message: 'Testing buttons',
-                      positiveButtonText: 'OK',
-                      negativeButtonText: 'Cancel',
-                      neutralButtonText: 'More Info',
-                    ),
-                    child: const Text('Show Dialog'),
-                  ),
+        (WidgetTester tester) async {
+      await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: Builder(
+            builder: (context) => Center(
+              child: TextButton(
+                onPressed: () => XDialog.show(
+                  context: context,
+                  title: 'Buttons Test',
+                  message: 'Testing buttons',
+                  positiveButtonText: 'OK',
+                  negativeButtonText: 'Cancel',
+                  neutralButtonText: 'More Info',
                 ),
+                child: const Text('Show Dialog'),
               ),
             ),
-          ));
+          ),
+        ),
+      ));
 
-          await tester.tap(find.text('Show Dialog'));
-          await tester.pumpAndSettle();
+      await tester.tap(find.text('Show Dialog'));
+      await tester.pumpAndSettle();
 
-          expect(find.text('OK'), findsOneWidget);
-          expect(find.text('Cancel'), findsOneWidget);
-          expect(find.text('More Info'), findsOneWidget);
-        });
+      expect(find.text('OK'), findsOneWidget);
+      expect(find.text('Cancel'), findsOneWidget);
+      expect(find.text('More Info'), findsOneWidget);
+    });
 
     testWidgets('Dialog with custom icon displays correctly',
-            (WidgetTester tester) async {
-          await tester.pumpWidget(MaterialApp(
-            home: Scaffold(
-              body: Builder(
-                builder: (context) => Center(
-                  child: TextButton(
-                    onPressed: () => XDialog.show(
-                      context: context,
-                      title: 'Icon Test',
-                      message: 'Testing custom icon',
-                      icon: const Icon(Icons.warning, color: Colors.red),
-                    ),
-                    child: const Text('Show Dialog'),
-                  ),
+        (WidgetTester tester) async {
+      await tester.pumpWidget(MaterialApp(
+        home: Scaffold(
+          body: Builder(
+            builder: (context) => Center(
+              child: TextButton(
+                onPressed: () => XDialog.show(
+                  context: context,
+                  title: 'Icon Test',
+                  message: 'Testing custom icon',
+                  icon: const Icon(Icons.warning, color: Colors.red),
                 ),
+                child: const Text('Show Dialog'),
               ),
             ),
-          ));
+          ),
+        ),
+      ));
 
-          await tester.tap(find.text('Show Dialog'));
-          await tester.pumpAndSettle();
+      await tester.tap(find.text('Show Dialog'));
+      await tester.pumpAndSettle();
 
-          expect(find.byIcon(Icons.warning), findsOneWidget);
-        });
+      expect(find.byIcon(Icons.warning), findsOneWidget);
+    });
 
     testWidgets('Dialog close button works', (WidgetTester tester) async {
       await tester.pumpWidget(MaterialApp(
